@@ -61,7 +61,7 @@ public class deck
      /*   List<List<card>> hands = new List<List<card>>();*/
         card tempCard = cardDeck[0];
         Debug.Log("Dealt");
-        Debug.Log(cardDeck[0]);
+        Debug.Log(cardDeck[0].number);
         cardDeck.RemoveAt(0);
         return tempCard;
     }
@@ -76,16 +76,18 @@ public class deck
     }
 }
 
-public class GameManager : MonoBehaviour
+public class Manager
 {
     deck deckManager = new deck();
     List<card> playerHand = new List<card>();
     List<card> compHand = new List<card>();
     List<card> communityCards = new List<card>();
-    void Start()
+    public void startGame()
     {
         deckManager.createDeck();
         deckManager.shuffle();
+        dealHands();
+        flop();
     }
     //round start
     //deal two cards
@@ -94,13 +96,13 @@ public class GameManager : MonoBehaviour
         deckManager.burn();
         for (int i = 0; i < 2; i++)
         {
-          playerHand[i] = deckManager.dealCard();
-          compHand[i] = deckManager.dealCard();
+            playerHand.Add(deckManager.dealCard());
+            compHand.Add(deckManager.dealCard());
         }
     }
 
    
-        //deal 2 cards to computer and player
+    //deal 2 cards to computer and player
 
 
     public void flop() { 
@@ -108,7 +110,7 @@ public class GameManager : MonoBehaviour
         deckManager.burn();
         for (int i = 0; i < 3; i++)
         {
-            communityCards[i] = deckManager.dealCard();
+            communityCards.Add(deckManager.dealCard());
         }
 
     }
@@ -148,4 +150,12 @@ public class GameManager : MonoBehaviour
 
     }
 
+public class GameManager : MonoBehaviour
+{
+    Manager gm = new Manager();
 
+    void start()
+    {
+        gm.startGame();
+    }
+}
