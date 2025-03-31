@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 770c0bf7d4cb70247bff1b5ffdcbe3fd
+guid: 1e0ccf658bee5c847803ebc95e3a94ad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4638338440176712454
-    second: Jokerswildhomescreenaseprite 1_0
+      213: 4130640169021434097
+    second: 5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jokerswildhomescreenaseprite 1_0
+      name: 5_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2500
-        height: 1000
+        width: 256
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af44a3d73cf41afb0800000000000000
-      internalID: -4638338440176712454
+      spriteID: 1f86b71495bf25930800000000000000
+      internalID: 4130640169021434097
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      5_0: 4130640169021434097
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ed8ada09456d2044fa91cebf86ebc86b
+guid: 7501cabe81afab94cba9deda0ffb46e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 203989635671673787
-    second: Ace 1_0
+      213: 1058205039988225401
+    second: Joker 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ace 1_0
+      name: Joker 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbb421c2e77b4d200800000000000000
-      internalID: 203989635671673787
+      spriteID: 975b60490ef7fae00800000000000000
+      internalID: 1058205039988225401
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Joker 1_0: 1058205039988225401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

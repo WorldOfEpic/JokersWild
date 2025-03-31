@@ -55,7 +55,7 @@ public class deck
     }
 
     //function that returns the top card on the deck,
-    //then removes it
+    //and removes it from the deck
     public card dealCard()
     {
      /*   List<List<card>> hands = new List<List<card>>();*/
@@ -74,32 +74,78 @@ public class deck
         Debug.Log("burned top card");
         cardDeck.RemoveAt(0);
     }
-
-
-    public void flipCard()
-    {
-        Debug.Log(cardDeck[0].number);
-        cardDeck.RemoveAt(0);
-    }
-    //this is the function for the flop
-    //revealing the 3 cards players can use to build their hand
-    public void flop()
-    {
-        burn();
-        flipCard();
-        flipCard();
-        flipCard();
-    }
 }
 
 public class GameManager : MonoBehaviour
 {
+    deck deckManager = new deck();
+    List<card> playerHand = new List<card>();
+    List<card> compHand = new List<card>();
+    List<card> communityCards = new List<card>();
     void Start()
     {
-        deck deckManager = new deck();
         deckManager.createDeck();
         deckManager.shuffle();
-        deckManager.flop();
     }
-}
+    //round start
+    //deal two cards
+    public void dealHands()
+    {
+        deckManager.burn();
+        for (int i = 0; i < 2; i++)
+        {
+          playerHand[i] = deckManager.dealCard();
+          compHand[i] = deckManager.dealCard();
+        }
+    }
+
+   
+        //deal 2 cards to computer and player
+
+
+    public void flop() { 
+        //flop happens, 3 cards come out
+        deckManager.burn();
+        for (int i = 0; i < 3; i++)
+        {
+            communityCards[i] = deckManager.dealCard();
+        }
+
+    }
+    //display the 3 cards
+
+
+    //decide whether to check or fold
+    //insert functions for that here
+    public void decision()
+    {
+
+    }
+
+
+
+    public void turnRiverCard() {
+        //flip over the turn card
+        deckManager.burn();
+        communityCards.Add(deckManager.dealCard());
+    }
+
+        //check or fold
+
+
+        //flip over the river card
+      
+
+        //check or fold
+
+
+        //check for winning hand
+    public void checkWinCon()
+    {
+
+    }
+
+
+    }
+
 
